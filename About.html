@@ -3,109 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us-Machakos Brew</title>
+    <title>About Us - Machakos Grand Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url("about2.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  line-height: 1.6;
+        :root {
+            --sand: #f6f1ea;
+            --terracotta: #c76f4b;
+            --forest: #2f3d36;
+            --charcoal: #1f1f1f;
         }
-
-main {
-  flex: 1;
-  padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      width: 100%;
-}
-
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: url('about2.png') center/cover no-repeat fixed;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .overlay {
+            background: rgba(23, 28, 26, 0.75);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 8%;
+        }
+        .card {
+            max-width: 820px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(6px);
+        }
         h1 {
-            text-align: center;
-            color: white;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
         }
         p {
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.88);
         }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
+        .pill {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(199, 111, 75, 0.25);
+            color: #f8e7db;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-bottom: 16px;
         }
-        .about-us-text-container {
-  position: absolute;
-  bottom: 130px;
-  right: 50px;
-  width: 40%;
-  text-align: left;
-}
-
-.about-us-text-container h1 {
-  text-align: right;
-  margin-left: auto;
-  width: fit-content;
-  color: white;
-}
-
-.about-us-text-container p {
-  text-align: left;
-  font-size: 0.9em;
-  color: white;
-}
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+        .cta {
+            margin-top: 24px;
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: var(--terracotta);
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
     </style>
-    
 </head>
 <body>
-
-    <main>
-    <div class="about-us-text-container">
-        <h1 >About Us </h1>
-    <p><b>
-        At Machakos brew in machakos, Kenya, we are passionate about coffee. Our journey began with a simple love for the rich aroma and flavor of freshly brewed coffee.
-         We believe that coffee is not just a beverage; it's an experience that brings people together.
-        We are dedicated to providing an exceptional coffee experience in a cozy and inviting atmosphere, where
-        guests can relax, socialize, and enjoy the finest coffee blends. Our team of skilled baristas is 
-        committed to crafting each cup with precision and care, ensuring that every sip is a delightful journey
-         for your taste buds.</b>
-    </p>
-    
-    
-</div>
-</main>
-
-<footer>
-    <p>&copy; 2023 Machakos Brew. All rights reserved.</p>
-    
-<p>⏰ Mon-Fri: 7AM - 7PM | Sat-Sun: 8AM - 6PM</p>
-    <p>Follow us on social media: 
-        <a href="https://www.facebook.com/machakosbrew">Facebook</a> | 
-        <a href="https://www.instagram.com/machakosbrew">Instagram</a> | 
-        <a href="https://www.twitter.com/machakosbrew">Twitter</a>
-    </p>
-    </footer>
-
-    
-
-    
+    <div class="overlay">
+        <div class="card">
+            <span class="pill">About Machakos Grand</span>
+            <h1>Hospitality shaped by Machakos warmth</h1>
+            <p>
+                Machakos Grand Hotel is a contemporary retreat rooted in Kenyan culture. Our story began with a desire
+                to create a destination where business travelers and leisure guests find equal measure of calm and care.
+            </p>
+            <p>
+                From panoramic suites to chef-curated dining, every detail is designed to feel personal. Our team blends
+                modern convenience with attentive service, ensuring each stay is effortless and memorable.
+            </p>
+            <p>
+                We invite you to settle in, explore Machakos, and let us craft the perfect itinerary for your time here.
+            </p>
+            <a class="cta" href="cat2website.html#booking">Plan Your Stay</a>
+        </div>
+    </div>
 </body>
 </html>

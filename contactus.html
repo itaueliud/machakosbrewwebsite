@@ -3,246 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Machakos Brew</title>
+    <title>Contact Us - Machakos Grand Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        
         :root {
-            --coffee-brown: #6F4E37;
-            --dark-brown: #2a2118;
-            --light-cream: #f9f5f0;
+            --sand: #f6f1ea;
+            --terracotta: #c76f4b;
+            --forest: #2f3d36;
+            --charcoal: #1f1f1f;
         }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: var(--light-cream);
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--sand);
+            color: var(--charcoal);
+        }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
-        
-        
         .contact-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
-        
         .contact-header h1 {
-            font-family: 'Playfair Display', serif;
-            color: var(--dark-brown);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            color: var(--forest);
         }
-        
         .contact-header p {
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 640px;
+            margin: 12px auto 0;
+            color: #555;
         }
-        
-        
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
-        
-        
-        .contact-info {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        .panel {
+            background: #fff;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(31, 31, 31, 0.08);
         }
-        
-        .contact-info h2 {
-            color: var(--coffee-brown);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+        .panel h2 {
+            color: var(--terracotta);
+            margin-bottom: 18px;
         }
-        
         .info-item {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
+            gap: 14px;
+            margin-bottom: 16px;
         }
-        
-        .info-icon {
-            color: var(--coffee-brown);
-            font-size: 1.2rem;
-            margin-right: 15px;
-            margin-top: 3px;
+        .info-item i {
+            color: var(--terracotta);
+            font-size: 1.1rem;
+            margin-top: 4px;
         }
-        
-        
-        .contact-form {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
         label {
             display: block;
-            margin-bottom: 8px;
-            color: var(--dark-brown);
-            font-weight: 500;
+            font-weight: 600;
+            margin-bottom: 6px;
         }
-        
         input, textarea, select {
             width: 100%;
-            padding: 12px 15px;
+            padding: 12px 14px;
+            border-radius: 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            transition: border 0.3s;
+            font-family: 'Work Sans', sans-serif;
+            margin-bottom: 14px;
         }
-        
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: var(--coffee-brown);
-        }
-        
         textarea {
-            min-height: 150px;
+            min-height: 140px;
             resize: vertical;
         }
-        
         .submit-btn {
-            background: var(--coffee-brown);
-            color: white;
+            background: var(--terracotta);
+            color: #fff;
             border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            border-radius: 4px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: var(--dark-brown);
-        }
-        
-        @media (max-width: 768px) {
-            .contact-header h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="contact-header">
-            <h1>Get in Touch</h1>
-            <p>Have questions about our coffee, want to book an event, or just want to say hello? We'd love to hear from you!</p>
+            <h1>Let us help plan your stay</h1>
+            <p>Reach out for reservations, corporate bookings, weddings, or tailored itineraries.</p>
         </div>
-        
         <div class="contact-grid">
-            
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                
+            <div class="panel">
+                <h2>Contact Details</h2>
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
+                    <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <h3>Our Location</h3>
-                        <p>123 Coffee Street, Machakos, Kenya</p>
+                        <h3>Address</h3>
+                        <p>123 Hillside Avenue, Machakos, Kenya</p>
                     </div>
                 </div>
-                
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
+                    <i class="fas fa-phone-alt"></i>
                     <div>
                         <h3>Phone</h3>
-                        <p>+254 758 897 082<br>+254 703 670 841</p>
+                        <p>0703670841</p>
                     </div>
                 </div>
-                
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+                    <i class="fas fa-envelope"></i>
                     <div>
                         <h3>Email</h3>
-                        <p>hello@machakosbrew.com</p>
+                        <p>reservations@machakosgrand.com</p>
                     </div>
                 </div>
-                
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
+                    <i class="fas fa-clock"></i>
                     <div>
-                        <h3>Opening Hours</h3>
-                        <p>Monday - Friday: 7AM - 7PM<br>Saturday - Sunday: 8AM - 6PM</p>
+                        <h3>Front Desk</h3>
+                        <p>Open 24/7 · Restaurant 6AM - 11PM</p>
                     </div>
                 </div>
             </div>
-            
-            
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
+
+            <div class="panel">
+                <h2>Send a Request</h2>
                 <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="general">General Inquiry</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="events">Events & Bookings</option>
-                            <option value="wholesale">Wholesale Inquiry</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="subject">Inquiry Type</label>
+                    <select id="subject" name="subject">
+                        <option value="reservation">Reservation</option>
+                        <option value="events">Events & Weddings</option>
+                        <option value="corporate">Corporate Travel</option>
+                        <option value="feedback">Guest Feedback</option>
+                    </select>
+
+                    <label for="message">How can we help?</label>
+                    <textarea id="message" name="message" required></textarea>
+
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
         </div>
-        
-        
-        
     </div>
 </body>
 </html>
