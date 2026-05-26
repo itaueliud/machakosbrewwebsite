@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Ôªø<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,11 +17,11 @@
                 <span><i class="fa-solid fa-envelope"></i> reservations@machakosgrand.com</span>
             </div>
             <div class="topbar-right">
-                <span>Check-in 2:00 PM ï Check-out 11:00 AM</span>
+                <span>Check-in 2:00 PM ‚Ä¢ Check-out 11:00 AM</span>
                 <a class="topbar-cta" href="#booking">Book Now</a>
             </div>
         </div>
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary">
             <div class="logo">
                 <span class="logo-mark">MG</span>
                 <div>
@@ -29,7 +29,12 @@
                     <p>Hotel & Resort</p>
                 </div>
             </div>
-            <div class="nav-links">
+
+            <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div class="nav-links" id="primary-nav">
                 <a href="#home">Home</a>
                 <a href="#rooms">Rooms</a>
                 <a href="#amenities">Amenities</a>
@@ -37,6 +42,9 @@
                 <a href="#gallery">Gallery</a>
                 <a href="#testimonials">Reviews</a>
                 <a href="#location">Location</a>
+                <a href="contactus.html">Contact</a>
+                <a class="mobile-only" href="About.html">About</a>
+                <a class="mobile-only" href="#booking">Check Availability</a>
             </div>
             <div class="nav-actions">
                 <a class="ghost-btn" href="About.html">About</a>
@@ -147,7 +155,7 @@
                         <h3>Deluxe King</h3>
                         <p>City views, plush bedding, and a marble rain shower.</p>
                         <ul>
-                            <li>1 King Bed ∑ 32 m≤</li>
+                            <li>1 King Bed ¬∑ 32 m¬≤</li>
                             <li>Work desk & lounge chair</li>
                             <li>Smart TV + mini bar</li>
                         </ul>
@@ -163,7 +171,7 @@
                         <h3>Premier Suite</h3>
                         <p>Separate living room, skyline balcony, curated in-room dining.</p>
                         <ul>
-                            <li>1 King Bed ∑ 55 m≤</li>
+                            <li>1 King Bed ¬∑ 55 m¬≤</li>
                             <li>Private balcony</li>
                             <li>Butler service on request</li>
                         </ul>
@@ -179,7 +187,7 @@
                         <h3>Garden Family</h3>
                         <p>Spacious comfort for families with direct garden access.</p>
                         <ul>
-                            <li>2 Queen Beds ∑ 44 m≤</li>
+                            <li>2 Queen Beds ¬∑ 44 m¬≤</li>
                             <li>Child-friendly amenities</li>
                             <li>Outdoor terrace</li>
                         </ul>
@@ -302,16 +310,16 @@
             </div>
             <div class="testimonial-grid">
                 <article class="testimonial-card">
-                    <p>ìThe service was exceptional. The team arranged a surprise dinner for our anniversary.î</p>
-                    <span>ó Paul Walker</span>
+                    <p>‚ÄúThe service was exceptional. The team arranged a surprise dinner for our anniversary.‚Äù</p>
+                    <span>‚Äî Paul Walker</span>
                 </article>
                 <article class="testimonial-card">
-                    <p>ìFast Wi-Fi, calm atmosphere, and the best breakfast buffet in Machakos.î</p>
-                    <span>ó Mwangi E.</span>
+                    <p>‚ÄúFast Wi-Fi, calm atmosphere, and the best breakfast buffet in Machakos.‚Äù</p>
+                    <span>‚Äî Mwangi E.</span>
                 </article>
                 <article class="testimonial-card">
-                    <p>ìBeautiful rooms and thoughtful details everywhere. We will be back soon.î</p>
-                    <span>ó Emily Harris</span>
+                    <p>‚ÄúBeautiful rooms and thoughtful details everywhere. We will be back soon.‚Äù</p>
+                    <span>‚Äî Emily Harris</span>
                 </article>
             </div>
         </section>
@@ -332,11 +340,11 @@
                         </div>
                         <div>
                             <h4>Hours</h4>
-                            <p>Front desk 24/7 ∑ Restaurant 6AM - 11PM</p>
+                            <p>Front desk 24/7 ¬∑ Restaurant 6AM - 11PM</p>
                         </div>
                         <div>
                             <h4>Contact</h4>
-                            <p>0703670841 ∑ reservations@machakosgrand.com</p>
+                            <p>0703670841 ¬∑ reservations@machakosgrand.com</p>
                         </div>
                     </div>
                 </div>
@@ -438,6 +446,30 @@
             banner.classList.remove('show');
         });
 
+        const navToggle = document.querySelector('.nav-toggle');
+        const primaryNav = document.getElementById('primary-nav');
+
+        const setMenuOpen = (open) => {
+            document.documentElement.classList.toggle('nav-open', open);
+            navToggle.setAttribute('aria-expanded', String(open));
+            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            navToggle.innerHTML = open
+                ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+                : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        };
+
+        navToggle?.addEventListener('click', () => {
+            setMenuOpen(!document.documentElement.classList.contains('nav-open'));
+        });
+
+        primaryNav?.addEventListener('click', (e) => {
+            if (e.target && e.target.tagName === 'A') setMenuOpen(false);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenuOpen(false);
+        });
+
         const checkin = document.getElementById('checkin');
         const checkout = document.getElementById('checkout');
         const today = new Date().toISOString().split('T')[0];
@@ -449,3 +481,4 @@
     </script>
 </body>
 </html>
+
